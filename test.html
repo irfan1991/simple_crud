@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengenalan React</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <button onclick="window.alert(123)"> info</button>
+    <!-- <script>
+        const CE = React.createElement;
+        ReactDOM.render(
+            CE('div',
+            {},
+
+            CE('h1',
+            { style : {color : 'red'}}
+            , 'Hello World'),
+
+            CE('p',
+            {}, 'Belajar REACT')
+            ),
+
+            document.getElementById('root')
+        )
+    </script> -->
+    <script type="text/babel"> 
+
+    function signup() {
+        alert('Signup!')
+    }
+    const elementCssInline = <h1 style={{color :'red', fontWeight:'bold'}}>Hello WOrld</h1>
+    const element = (
+        <div id="main">
+            <h1 className="title"className>Hello WOrld</h1>
+            <p className="content">Belajar React</p>
+            <input type="text" />
+            <button type="button" onClick={ signup }>Signup</button>
+        </div>
+    )
+    const nama = 'Wafa'
+    const namabelakng = 'Apriani'
+    const image = './public/logo192.png'
+    const elementImage = <img src={image} />
+    const expression = <h1>{1+2} {nama +' '+ namabelakng}</h1>
+    let umur = 12
+    const elementUmur = (<p>
+        {umur >= 17 ? 'Cukup umur' : 'Belum CUkup UMur'}
+        </p>)
+    let umur2 = 18
+    const elementUmur2 = (<p>{umur2 >= 17 && 'KOnten Dewasa'}</p>)
+
+    // function tick() {
+    //     const elementTick = (
+    //         <div>
+    //             <h1>Hello , world </h1>
+    //             <h2>
+    //                 It is, {new Date().toLocaleTimeString()}  
+    //             </h2>
+    //         </div>
+    //     )
+
+    //     ReactDOM.render(
+    //         elementTick,
+    //         document.getElementById('root')
+    //     )
+        
+    // }
+
+    // setInterval(tick, 1000);
+
+    // class Hello extends React.Component {
+    //     render(){
+    //         return <h1>Hello WOrld</h1>
+    //     }
+    // }
+    
+    function Hello() {
+        return <h1>Hello World</h1>
+    }
+
+const elementComponent = <Hello />
+
+        ReactDOM.render(
+            elementComponent,
+            document.getElementById('root')
+        )
+
+    </script>
+</body>
+</html>

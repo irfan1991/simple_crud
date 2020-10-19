@@ -1,0 +1,9 @@
+3 prinsip 
+- COmponent Based
+- Declarative
+-  Learn ONce Write Anywhere
+
+Aturan JSX
+1. 1 element root
+2. Setiap element harus berpasangan <p></p>
+3. kalau yng gak pasangan harus ditutup <input />, <br />
